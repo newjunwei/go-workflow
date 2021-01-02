@@ -1,4 +1,4 @@
-module github.com/go-workflow
+module github.com/newjunwei/go-workflow/go-workflow
 
 go 1.15
 

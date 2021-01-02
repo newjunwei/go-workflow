@@ -1,4 +1,4 @@
-module github.com/newjunwei/workflow-controller
+module github.com/newjunwei/go-workflow/workflow-controller
 
 go 1.15
 

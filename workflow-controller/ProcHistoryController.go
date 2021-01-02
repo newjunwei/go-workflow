@@ -4,9 +4,9 @@ import (
 	"fmt"
 	"net/http"
 
-	"github.com/go-workflow/go-workflow/workflow-engine/model"
+	"github.com/newjunwei/go-workflow/workflow-engine/model"
 
-	"github.com/go-workflow/go-workflow/workflow-engine/service"
+	"github.com/newjunwei/go-workflow/workflow-engine/service"
 	"github.com/mumushuiding/util"
 )
 

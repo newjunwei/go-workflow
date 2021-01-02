@@ -1,4 +1,4 @@
-module github.com/newjunwei/workflow-router
+module github.com/newjunwei/go-workflow/workflow-router
 
 go 1.15
 

@@ -1,4 +1,4 @@
-module github.com/newjuwnei/workflow-engine
+module github.com/newjunwei/go-workflow/workflow-engine
 
 go 1.15
 
