@@ -9,7 +9,7 @@ docker run  -e DbType=mysql -e DbLogMode=false -e DbName=test -e DbHost=localhos
 
 # 1.3 通过 go get 获取
 
- 1.go get https://github.com/go-workflow/go-workflow
+ 1.go get https://github.com/newjunwei/go-workflow
 
  2.进入根目录，打开config.json文件,修改数据库连接配置
 

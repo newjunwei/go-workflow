@@ -8,11 +8,11 @@ import (
 	"sync"
 	"time"
 
-	"github.com/go-workflow/go-workflow/workflow-engine/flow"
+	"github.com/newjunwei/go-workflow/workflow-engine/flow"
 
 	"github.com/jinzhu/gorm"
 
-	"github.com/go-workflow/go-workflow/workflow-engine/model"
+	"github.com/newjunwei/go-workflow/workflow-engine/model"
 	"github.com/mumushuiding/util"
 )
 

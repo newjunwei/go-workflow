@@ -131,7 +131,7 @@ type NodeInfo struct {
 
 // GetProcessConfigFromJSONFile test
 func (n *Node) GetProcessConfigFromJSONFile() {
-	file, err := os.Open("D:/Workspaces/go/src/github.com/go-workflow/go-workflow/processConfig2.json")
+	file, err := os.Open("D:/Workspaces/go/src/github.com/newjunwei/go-workflow/processConfig2.json")
 	if err != nil {
 		log.Printf("cannot open file processConfig.json:%v", err)
 		panic(err)

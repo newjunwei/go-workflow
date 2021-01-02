@@ -3,7 +3,7 @@ package service
 import (
 	"github.com/mumushuiding/util"
 
-	"github.com/go-workflow/go-workflow/workflow-engine/model"
+	"github.com/newjunwei/go-workflow/workflow-engine/model"
 )
 
 // UserInfo 用户信息
