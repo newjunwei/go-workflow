@@ -5,6 +5,9 @@ import (
 	"fmt"
 	"github.com/jinzhu/gorm"
 	"github.com/mumushuiding/util"
+	"github.com/newjunwei/go-workflow/go-workflow/engine/flow"
+	"github.com/newjunwei/go-workflow/go-workflow/engine/model"
+
 	"math"
 	"strconv"
 	"sync"

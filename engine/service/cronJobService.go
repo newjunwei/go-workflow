@@ -13,7 +13,7 @@ func CronJobs() {
 		c := cron.New()
 		// 每隔 20 秒执行
 		spec := "*/20 * * * * ?"
-		//每隔20秒将已经结束的流程数据迁移至历史数据表
+		// 每隔20秒将已经结束的流程数据迁移至历史数据表
 		c.AddFunc(spec, func() {
 			MoveFinishedProcInstToHistory()
 		})

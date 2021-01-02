@@ -6,6 +6,8 @@ import (
 	"sync"
 
 	"github.com/jinzhu/gorm"
+	"github.com/newjunwei/go-workflow/go-workflow/engine/flow"
+	"github.com/newjunwei/go-workflow/go-workflow/engine/model"
 
 	"github.com/mumushuiding/util"
 )

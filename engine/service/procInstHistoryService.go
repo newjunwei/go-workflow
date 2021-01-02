@@ -4,6 +4,7 @@ import (
 	"errors"
 
 	"github.com/mumushuiding/util"
+	"github.com/newjunwei/go-workflow/go-workflow/engine/model"
 )
 
 // FindProcHistory 查询我的审批

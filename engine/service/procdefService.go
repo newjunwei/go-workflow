@@ -6,6 +6,8 @@ import (
 	"time"
 
 	"github.com/mumushuiding/util"
+	"github.com/newjunwei/go-workflow/go-workflow/engine/flow"
+	"github.com/newjunwei/go-workflow/go-workflow/engine/model"
 )
 
 var saveLock sync.Mutex

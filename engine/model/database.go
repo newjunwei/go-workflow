@@ -5,9 +5,8 @@ import (
 	"log"
 	"strconv"
 
-	config "github.com/newjunwei/go-workflow/workflow-config"
-
 	"github.com/jinzhu/gorm"
+	"github.com/newjunwei/go-workflow/go-workflow/config"
 
 	// mysql
 	_ "github.com/go-sql-driver/mysql"

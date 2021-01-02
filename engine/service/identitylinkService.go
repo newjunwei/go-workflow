@@ -3,6 +3,7 @@ package service
 import (
 	"github.com/jinzhu/gorm"
 	"github.com/mumushuiding/util"
+	"github.com/newjunwei/go-workflow/go-workflow/engine/model"
 )
 
 // SaveIdentitylinkTx SaveIdentitylinkTx

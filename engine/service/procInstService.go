@@ -7,6 +7,8 @@ import (
 
 	"github.com/jinzhu/gorm"
 	"github.com/mumushuiding/util"
+	"github.com/newjunwei/go-workflow/go-workflow/engine/flow"
+	"github.com/newjunwei/go-workflow/go-workflow/engine/model"
 )
 
 // ProcessReceiver 接收页面传递参数
@@ -127,7 +129,7 @@ func (p *ProcessReceiver) StartProcessInstanceByID(variable *map[string]string) 
 		return 0, err
 	}
 	// fmt.Printf("获取流程定义耗时：%v", time.Since(times))
-	//--------以下需要添加事务-----------------
+	// --------以下需要添加事务-----------------
 	step := 0 // 0 为开始节点
 	tx := model.GetTx()
 	// 新建流程实例
@@ -140,7 +142,7 @@ func (p *ProcessReceiver) StartProcessInstanceByID(variable *map[string]string) 
 		StartUserID:   p.UserID,
 		StartUserName: p.Username,
 		Company:       p.Company,
-	} //开启事务
+	} // 开启事务
 	// times = time.Now()
 	procInstID, err := CreateProcInstTx(&procInst, tx) // 事务
 	// fmt.Printf("启动流程实例耗时：%v", time.Since(times))
@@ -161,7 +163,7 @@ func (p *ProcessReceiver) StartProcessInstanceByID(variable *map[string]string) 
 		AgreeNum:      1,
 	}
 	// 生成执行流，一串运行节点
-	_, err = GenerateExec(exec, node, p.UserID, variable, tx) //事务
+	_, err = GenerateExec(exec, node, p.UserID, variable, tx) // 事务
 	if err != nil {
 		tx.Rollback()
 		return 0, err
@@ -186,7 +188,7 @@ func (p *ProcessReceiver) StartProcessInstanceByID(variable *map[string]string) 
 		return 0, err
 	}
 	// fmt.Printf("生成新任务耗时：%v", time.Since(times))
-	//--------------------流转------------------
+	// --------------------流转------------------
 	// times = time.Now()
 	// 流程移动到下一环节
 	err = MoveStage(nodeinfos, p.UserID, p.Username, p.Company, "启动流程", "", task.ID, procInstID, step, true, tx)
@@ -196,7 +198,7 @@ func (p *ProcessReceiver) StartProcessInstanceByID(variable *map[string]string) 
 	}
 	// fmt.Printf("流转到下一流程耗时：%v", time.Since(times))
 	// fmt.Println("--------------提交事务----------")
-	tx.Commit() //结束事务
+	tx.Commit() // 结束事务
 	return procInstID, err
 }
 
